@@ -1,0 +1,26 @@
+name: Arduino CI Build Check
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Arduino CLI
+        uses: arduino/setup-arduino-cli@v1.1.2
+
+      - name: Install ESP32 Core and Dependencies
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install esp32:esp32
+          arduino-cli lib install "mcp_can"
+          arduino-cli lib install "Adafruit Unified Sensor"
+
+      - name: Compile Main Sketch
+        run: arduino-cli compile --fqbn esp32:esp32:esp32 auv-embedded-firmware/auv-embedded-firmware.ino
