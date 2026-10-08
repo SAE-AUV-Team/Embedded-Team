@@ -1,0 +1,17 @@
+# Arduino Build Files
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+
+# Build and Output Directories
+build/
+.build/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# VS Code / Arduino IDE 2.x Workspace Settings (Optional)
+.vscode/
