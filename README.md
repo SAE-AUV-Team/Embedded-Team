@@ -36,6 +36,12 @@ The Embedded division manages the interface between high-level autonomous planne
 ### Step 1: Install Required Tools
 1. **GitHub Desktop:** Download and install [GitHub Desktop](https://desktop.github.com/). This provides a visual interface for managing your code.
 2. **Code Editor:** I recommend using [Arduino IDE](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.10_Windows_64bit.exe) for editing the C++ firmware files.
+3. **Proteus Design Suite:** Install Proteus for local schematic capture and microcontroller simulation.
+4. **Proteus Microcontroller Package:** Proteus does not include ESP32 or STM32 models by default. 
+   * Download the required ESP32/STM32 Proteus Library Package [ESP32 Package](https://images.theengineeringprojects.com/document/main/2023/07/esp32-library-for-proteus.zip).
+   * Extract the `.IDX` and `.LIB` files.
+   * Paste them into the Proteus library directory: `C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\LIBRARY`.
+5. **Online Circuit Designer:** Use [Wokwi](https://wokwi.com/) (ideal for ESP32/Arduino simulation) or [Falstad](https://www.falstad.com/circuit/) (for quick analog/digital logic tests) for rapid browser-based prototyping before moving to physical hardware.
 
 ### Step 2. Authenticate GitHub Desktop
 1. Launch GitHub Desktop.
